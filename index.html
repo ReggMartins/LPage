@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataSaúde Tech - Integração de Dados</title>
+    <link rel="stylesheet" href="css/style01.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Topo -->
+    <header>
+        <div class="logo">DataSaúde Tech</div>
+    </header>
+
+    <!-- Primeira Dobra -->
+    <section class="hero">
+        <h1>Integração e Segurança de Dados para a Saúde Pública</h1>
+        <p>Conecte sistemas legados, automatize processos do departamento de informática e garanta a segurança dos dados dos pacientes com uma plataforma feita para o setor público.</p>
+        <a href="#agendamento" class="btn" id="btn-hero">Agendar Demonstração Gratuita</a>
+    </section>
+
+    <!-- Problema / Solução -->
+    <section class="features">
+        <div class="feature-card">
+            <h3>Centralização</h3>
+            <p>Unifique os dados de diferentes unidades de saúde em um único painel ágil e intuitivo.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Segurança de Dados</h3>
+            <p>Criptografia de ponta a ponta que atende rigorosamente às normas de proteção exigidas pelo setor.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Implementação Ágil</h3>
+            <p>Suporte dedicado para que o seu departamento de tecnologia não pare durante a transição.</p>
+        </div>
+    </section>
+
+    <!-- Fundo do Funil: Formulário -->
+    <section id="agendamento" class="form-section">
+        <h2>Pronto para modernizar a sua infraestrutura?</h2>
+        <p>Preencha os dados abaixo e um especialista avaliará o seu cenário.</p>
+        
+        <form id="form-demo">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+            <label for="email">E-mail Corporativo</label>
+            <input type="email" id="email" placeholder="nome@secretaria.sp.gov.br" required>
+
+            <label for="cargo">Qual é o seu cargo atual?</label>
+            <select id="cargo" required>
+                <option value="">Selecione uma opção...</option>
+                <option value="diretor">Diretor(a) de Informática / TI</option>
+                <option value="coordenador">Coordenador(a)</option>
+                <option value="analista">Analista de Sistemas / Técnico</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <button type="submit" class="btn">Quero Falar com um Especialista</button>
+        </form>
+    </section>
+
+    
+    <!-- Rodapé -->
+    <footer>
+        <div class="company-info">
+            <strong>DataSaúde Tech Soluções LTDA</strong><br>
+            CNPJ: 00.000.000/0001-00<br>
+            Av. Inovação, 1000 - Centro, São Paulo - SP
+        </div>
+        <p>Contato: <a href="mailto:contato@datasaude.com.br">contato@datasaude.com.br</a> | (11) 99999-9999</p>
+        
+        <!-- Ícones Animados -->
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="fa-brands fa-facebook" aria-label="Facebook"></a>
+            <a href="https://instagram.com" target="_blank" class="fa-brands fa-instagram" aria-label="Instagram"></a>
+            <a href="https://twitter.com" target="_blank" class="fa-brands fa-x-twitter" aria-label="X (Twitter)"></a>
+            <a href="https://github.com" target="_blank" class="fa-brands fa-github" aria-label="GitHub"></a>
+        </div>
+
+        <p>&copy; 2026 DataSaúde Tech. Todos os direitos reservados.</p>
+
+        <!-- Créditos de Desenvolvimento -->
+        <div class="developer-credit">
+            Desenvolvido por <br> <a href="https://sites.google.com/view/vrm-tech/in%C3%ADcio" target="_blank"> <img src="img/vrmIcon.png" alt="VRM TECH"> </a>
+        </div>
+    </footer>
+
+
+    <!-- Comportamentos dinâmicos -->
+    <script>
+        // 1. Rolagem suave: Quando o usuário clicar no botão superior, a página desce suavemente até o formulário.
+        document.getElementById('btn-hero').addEventListener('click', function(event) {
+            event.preventDefault(); // Impede o salto brusco padrão do HTML
+            document.getElementById('agendamento').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // 2. Interceptar o formulário: Simula o envio de dados sem recarregar a página.
+        document.getElementById('form-demo').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede que a página recarregue ao clicar em "Enviar"
+            
+            // Captura o nome digitado para personalizar a mensagem de sucesso
+            const nome = document.getElementById('nome').value;
+            
+            // Exibe um alerta de confirmação
+            alert(`Obrigado, ${nome}! Sua solicitação foi recebida com sucesso.\n\nNossa equipe analisará as informações do seu departamento e entrará em contato em até 24 horas.`);
+            
+            // Limpa os campos do formulário para o estado original
+            this.reset();
+        });
+    </script>
+</body>
+</html>
