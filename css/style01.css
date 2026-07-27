@@ -1,0 +1,170 @@
+ /* CSS Básico para estruturação e visual */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho sem distrações */
+        header {
+            background-color: #ffffff;
+            padding: 20px 10%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0056b3;
+        }
+
+        /* Seção 1: Hero (Primeira Dobra) */
+        .hero {
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+            padding: 80px 10%;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.8em;
+            color: #102a43;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            color: #486581;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* Botão de Chamada para Ação (CTA) */
+        .btn {
+            background-color: #f26419;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: bold;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover { background-color: #d65510; }
+
+        /* Seção 2: Benefícios */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 60px 10%;
+            background-color: #fff;
+            gap: 20px;
+        }
+        .feature-card {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 20px;
+        }
+        .feature-card h3 { color: #0056b3; }
+
+        /* Seção 3: Formulário */
+        .form-section {
+            background-color: #102a43;
+            color: white;
+            padding: 80px 10%;
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: 30px auto 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            color: #333;
+            text-align: left;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Garante que o padding não quebre a largura */
+        }
+        form button { width: 100%; }
+
+        /* Rodapé */
+        footer {
+            background-color: #0b1d2e; /* Uma cor um pouco mais escura que a seção de formulário */
+            color: #a0aec0; /* Texto em tom de cinza claro */
+            text-align: center;
+            padding: 30px 10%;
+            font-size: 0.9em;
+            border-top: 1px solid #1f3a52;
+        }
+        footer .company-info {
+            margin-bottom: 15px;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            color: #f26419;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Ícones de Redes Sociais */
+        .social-icons {
+            margin: 25px 0;
+        }
+        .social-icons a {
+            display: inline-block;
+            color: #a0aec0; /* Cor padrão cinza */
+            font-size: 28px;
+            margin: 0 12px;
+            text-decoration: none;
+            /* A mágica da animação acontece aqui na transição: */
+            transition: transform 0.3s ease, color 0.3s ease; 
+        }
+        
+        /* O efeito ao passar o mouse (flutua para cima e aumenta levemente) */
+        .social-icons a:hover {
+            transform: translateY(-5px) scale(1.15);
+        }
+
+        /* Cores reais de cada rede ao passar o mouse */
+        .social-icons a.fa-facebook:hover { color: #1877F2; }
+        .social-icons a.fa-instagram:hover { color: #E4405F; }
+        .social-icons a.fa-x-twitter:hover { color: #ffffff; }
+        .social-icons a.fa-github:hover { color: #ffffff; }
+
+        /* Créditos da Agência / Desenvolvedor */
+        .developer-credit {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #1f3a52;
+            font-size: 0.85em;
+            color: #627d98;
+        }
+        .developer-credit a {
+            color: #a0aec0;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .developer-credit a:hover {
+            color: #f26419; /* Fica laranja ao passar o mouse */
+        }
